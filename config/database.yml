@@ -19,14 +19,15 @@ default: &default
 
 development:
   <<: *default
-  database: demo_1_concurrent_requests_development
+  database: demo_1_handle_concurrent_requests_with_locking_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: demo_1_concurrent_requests_test
+  database: demo_1_handle_concurrent_requests_with_locking_test
+  pool: 10
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -50,6 +51,6 @@ test:
 #
 production:
   <<: *default
-  database: demo_1_concurrent_requests_production
-  username: demo_1_concurrent_requests
-  password: <%= ENV['DEMO_1_CONCURRENT_REQUESTS_DATABASE_PASSWORD'] %>
+  database: demo_1_handle_concurrent_requests_with_locking_production
+  username: demo_1_handle_concurrent_requests_with_locking
+  password: <%= ENV['demo_1_handle_concurrent_requests_with_locking_DATABASE_PASSWORD'] %>

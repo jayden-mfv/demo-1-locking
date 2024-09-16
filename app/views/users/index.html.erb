@@ -1,0 +1,35 @@
+<h1>Users</h1>
+
+<%= link_to 'New User', new_user_path, class: 'btn btn-sm btn-outline-success float-end my-3' %>
+
+<table class='table table-bordered table-striped table-hover my-5'>
+  <thead>
+    <tr>
+      <th scope='col'>Name</th>
+      <th scope='col'>User Profile</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td scope='row' width='30%'>
+          <%= user.name %>
+          <ul class='py-1 px-0 my-1'>
+            <%= link_to 'Show', user, class: 'btn btn-sm btn-outline-primary' %>
+            <%= link_to 'Edit', edit_user_path(user), class: 'btn btn-sm btn-outline-secondary' %>
+            <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger' %>
+          </ul>
+        </td>
+        <td scope='row'>
+          <% user_profiles = UserProfile.where(user: user) %>
+          <%= user_profiles.inspect %>
+          <ul class='py-1 px-0 my-1'>
+            <%= link_to 'Create', user_user_profiles_path(user), method: :post, class: 'btn btn-sm btn-outline-primary' if user_profiles.blank? %>
+            <%= link_to 'Destroy', destroy_all_user_user_profiles_path(user), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger' if user_profiles.present? %>
+          </ul>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

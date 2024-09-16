@@ -50,7 +50,52 @@ group :test do
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+
+  # RSpec meta-gem that depends on the other components
+  gem 'rspec'
+
+  # RSpec for Rails 6+
+  gem 'rspec-rails'
+
+  # RSpec::Parameterized supports simple parameterized test syntax in rspec
+  gem 'rspec-parameterized'
+
+  # Making callback tests easy on the fingers and eyes
+  gem 'shoulda-callback-matchers'
+
+  # Simple one-liner tests for common Rails functionality
+  gem 'shoulda-matchers'
+
+  # Collection cardinality matchers, extracted from rspec-expectations
+  gem 'rspec-collection_matchers'
+
+  # Strategies for cleaning databases. Can be used to ensure a clean slate for testing
+  gem 'database_cleaner-active_record'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# A library for setting up Ruby objects as test data
+gem 'factory_bot'
+
+# factory_bot_rails provides integration between factory_bot and rails 5.0 or newer
+gem 'factory_bot_rails'
+
+# A library for generating fake data such as names, addresses, and phone numbers
+gem 'faker'
+
+# A Ruby static code analyzer and formatter, based on the community Ruby style guide.
+gem 'rubocop', require: false
+
+# Advisory locking for ActiveRecord
+gem 'with_advisory_lock'
+
+# Retrying code blocks in Ruby
+gem 'retryable'
+
+gem 'bootstrap', '~> 5.3', '>= 5.3.3'
+
+gem 'jquery-rails'
+
+gem 'bootstrap_form', '~> 5.4'

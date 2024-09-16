@@ -1,0 +1,70 @@
+require: rubocop-rails
+AllCops:
+  TargetRubyVersion: 3.1
+  Exclude:
+    - "db/migrate/*"
+    - "bin/*"
+    - "config/*"
+    - "config/environments/*"
+    - "config/initializers/*"
+    - "vendor/*"
+    - "node_modules/*"
+    - "tmp/*"
+    - "log/*"
+    - "public/*"
+    - "spec/*"
+    - "test/*"
+    - "Guardfile"
+    - "Rakefile"
+    - "Capfile"
+    - "Gemfile"
+    - "Gemfile.lock"
+    - "config.ru"
+    - "package.json"
+    - "yarn.lock"
+    - "Procfile"
+    - "Dockerfile"
+    - "docker-compose.yml"
+    - "README.md"
+    - "LICENSE"
+    - "CHANGELOG.md"
+    - "CONTRIBUTING.md"
+    - "CODE_OF_CONDUCT.md"
+    - "db/*"
+    - "app/config/*"
+    - "app/assets/*"
+    - "app/channels/*"
+    - "app/helpers/*"
+    - "app/mailers/*"
+    - "app/views/*"
+    - "app/javascript/*"
+    - "app/javascript/packs/*"
+    - "app/javascript/channels/*"
+    - "app/javascript/controllers/*"
+    - "app/javascript/helpers/*"
+    - "app/javascript/models/*"
+    - "app/javascript/policies/*"
+    - "app/javascript/services/*"
+    - "app/javascript/stylesheets/*"
+    - "app/javascript/templates/*"
+    - "app/javascript/utils/*"
+    - "app/javascript/validators/*"
+    - "app/javascript/workers/*"
+    - "app/javascript/webpack"
+    - "spec/spec_helper.rb"
+    - "spec/rails_helper.rb"
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/NegatedWhile:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Lint/ShadowingOuterLocalVariable:
+  Enabled: false
